@@ -42,7 +42,7 @@
                             id:
                         </td>
                         <td valign="middle" align="left" >
-                            <input value="${requestScope.dept.id}" name="id" readonly />
+                            <input value="${requestScope.emp.id}" name="id" readonly />
                         </td>
                     </tr>
                     <tr>
@@ -50,7 +50,7 @@
                             name:
                         </td>
                         <td valign="middle" align="left">
-                            <input type="text" class="inputgri" name="name" value="${requestScope.dept.name}"/>
+                            <input type="text" class="inputgri" name="name" value="${requestScope.emp.name}"/>
                         </td>
                     </tr>
                     <tr>
@@ -58,7 +58,7 @@
                             salary:
                         </td>
                         <td valign="middle" align="left">
-                            <input type="text" class="inputgri" name="salary" value="${requestScope.dept.salary}"/>
+                            <input type="text" class="inputgri" name="salary" value="${requestScope.emp.salary}"/>
                         </td>
                     </tr>
                     <tr>
@@ -66,7 +66,7 @@
                             age:
                         </td>
                         <td valign="middle" align="left">
-                            <input type="text" class="inputgri" name="age" value="${requestScope.dept.age}"/>
+                            <input type="text" class="inputgri" name="age" value="${requestScope.emp.age}"/>
                         </td>
                     </tr>
                     <tr>
@@ -74,7 +74,7 @@
                             bir:
                         </td>
                         <td valign="middle" align="left">
-                            <input type="text" class="inputgri" name="bir" value="<fmt:formatDate value="${requestScope.dept.bir}" pattern="yyyy-MM-dd"/>"/>
+                            <input type="text" class="inputgri" name="bir" value="<fmt:formatDate value="${requestScope.emp.bir}" pattern="yyyy-MM-dd"/>"/>
                         </td>
                     </tr>
                     <tr>

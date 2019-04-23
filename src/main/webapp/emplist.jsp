@@ -58,7 +58,7 @@
                         Operation
                     </td>
                 </tr>
-                <c:forEach var="dd" items="${requestScope.list}">
+                <c:forEach var="dd" items="${requestScope.emps}">
                 <tr>
                     <td>${dd.id}</td>
                     <td>${dd.name}</td>
@@ -67,8 +67,8 @@
                     <td><fmt:formatDate value="${dd.bir}" pattern="yyyy-MM-dd"/></td>
                     <td>${dd.sex}</td>
                     <td>
-                        <a href="${app}/dept/delete?id=${dd.id}">delete emp</a>&nbsp;
-                        <a href="${app}/dept/findById?id=${dd.id}">update emp</a>
+                        <a href="">delete emp</a>&nbsp;
+                        <a href="${app}/emp/queryOne?id=${dd.id}">update emp</a>
                     </td>
                 </tr>
                 </c:forEach>

@@ -5,12 +5,12 @@ server:
       development: true
 mybatis:
   type-aliases-package: com.baizhi.entity
- # mapper-locations: classpath:mapper/*.xml
+
 spring:
   http:
     multipart:
-      max-request-size: 209715200  #用来控制文件上传大小的限制
-      max-file-size: 209715200 #用来指定服务端最大文件大小
+      max-request-size: 209715200
+      max-file-size: 209715200
   mvc:
     view:
       suffix: .jsp
@@ -21,7 +21,7 @@ spring:
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
-#分页插件相关参数
+
 pagehelper:
   helperDialect: mysql
   reasonable: true

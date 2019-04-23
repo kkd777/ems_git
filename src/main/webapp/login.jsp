@@ -8,6 +8,21 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <link rel="stylesheet" type="text/css"
           href="${app}/css/style.css" />
+    <script src="${app}/js/jquery-3.3.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                $.post("${app}/user/login",$("#infoform").serialize(),function (result) {
+                    console.log(result);
+                    if(result.success){
+                        location.href="${app}/emp/queryAll"
+                    }else if(!result.success){
+                        $("#loginfailed").html(result.message);
+                    }
+                },"JSON")
+            })
+        })
+    </script>
 </head>
 
 <body>
@@ -34,7 +49,7 @@
             <h1>
                 login
             </h1>
-            <form action="${app}/user/login" method="post">
+            <form  method="post" id="infoform">
                 <table cellpadding="0" cellspacing="0" border="0"
                        class="form_table">
                     <tr>
@@ -55,11 +70,13 @@
                     </tr>
                 </table>
                 <p>
-                    <input type="submit" class="button" value="Submit &raquo;" />
-                    <input type="button" class="button" onclick="location.href='${app}/regist.jsp'" value="Regist &raquo;" />
+                    <input type="button" class="button" id="btn" value="Submit &raquo;" />
+
+                    <input type="button" class="button" onclick="location.href='./regist.jsp'" value="Regist &raquo;" />
+                    <span class="text-danger" id="loginfailed"></span>
                 </p>
             </form>
-            <span style="color: red">${requestScope.msg}</span>
+
         </div>
     </div>
     <div id="footer">
