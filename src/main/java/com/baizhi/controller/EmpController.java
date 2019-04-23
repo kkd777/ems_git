@@ -12,6 +12,7 @@ public class EmpController {
     @Autowired
     private EmpService empService;
 
+    //傻子
     @RequestMapping("delete")
     @ResponseBody
     public String delete(String id){
