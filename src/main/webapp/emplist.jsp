@@ -68,7 +68,7 @@
                     <td>${dd.sex}</td>
                     <td>
                         <a href="${app}/dept/delete?id=${dd.id}">delete emp</a>&nbsp;
-                        <a href="${app}/dept/findById?id=${dd.id}">update emp</a>
+                        <a href="${app}/emp/findOne?id=${dd.id}">update emp</a>
                     </td>
                 </tr>
                 </c:forEach>

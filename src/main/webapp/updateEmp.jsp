@@ -34,7 +34,7 @@
             <h1>
                 update Emp info:
             </h1>
-            <form action="${app}/dept/update" method="post">
+            <form action="${app}/emp/update" method="post">
                 <table cellpadding="0" cellspacing="0" border="0"
                        class="form_table">
                     <tr>
@@ -42,7 +42,7 @@
                             id:
                         </td>
                         <td valign="middle" align="left" >
-                            <input value="${requestScope.dept.id}" name="id" readonly />
+                            <input value="${sessionScope.emp.id}" name="id" readonly />
                         </td>
                     </tr>
                     <tr>
@@ -50,7 +50,7 @@
                             name:
                         </td>
                         <td valign="middle" align="left">
-                            <input type="text" class="inputgri" name="name" value="${requestScope.dept.name}"/>
+                            <input type="text" class="inputgri" name="name" value="${sessionScope.emp.name}"/>
                         </td>
                     </tr>
                     <tr>
@@ -58,7 +58,7 @@
                             salary:
                         </td>
                         <td valign="middle" align="left">
-                            <input type="text" class="inputgri" name="salary" value="${requestScope.dept.salary}"/>
+                            <input type="text" class="inputgri" name="salary" value="${sessionScope.emp.salary}"/>
                         </td>
                     </tr>
                     <tr>
@@ -66,7 +66,7 @@
                             age:
                         </td>
                         <td valign="middle" align="left">
-                            <input type="text" class="inputgri" name="age" value="${requestScope.dept.age}"/>
+                            <input type="text" class="inputgri" name="age" value="${sessionScope.emp.age}"/>
                         </td>
                     </tr>
                     <tr>
@@ -74,7 +74,7 @@
                             bir:
                         </td>
                         <td valign="middle" align="left">
-                            <input type="text" class="inputgri" name="bir" value="<fmt:formatDate value="${requestScope.dept.bir}" pattern="yyyy-MM-dd"/>"/>
+                            <input type="text" class="inputgri" name="bir" value="<fmt:formatDate value="${sessionScope.emp.bir}" pattern="yyyy-MM-dd"/>"/>
                         </td>
                     </tr>
                     <tr>
@@ -83,8 +83,8 @@
                         </td>
                         <td valign="middle" align="left">
                             <select name="sex">
-                                <option value="男" selected="${requestScope.dept.sex eq '男'?true:false}">男</option>
-                                <option value="女" selected="${requestScope.dept.sex eq '女'?true:false}">女</option>
+                                <option value="男" selected="${sessionScope.emp.sex eq '男'?true:false}">男</option>
+                                <option value="女" selected="${sessionScope.emp.sex eq '女'?true:false}">女</option>
                             </select>
                         </td>
                     </tr>
