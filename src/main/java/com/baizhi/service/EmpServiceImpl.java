@@ -15,6 +15,7 @@ public class EmpServiceImpl implements EmpService {
     private EmpMapper empMapper;
 
     @Override
+    //删除方法
     public void delete(String id) {
         empMapper.deleteByPrimaryKey(id);
     }
